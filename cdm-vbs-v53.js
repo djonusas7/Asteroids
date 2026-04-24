@@ -128,16 +128,16 @@
       .vbs-nav-give:hover { opacity: 0.85; }
 
       /* ── HERO (black, massive type — matches CDM hero) ── */
-      .vbs-hero {
-        background: #000;
-        min-height: 88vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 80px 56px;
-        position: relative;
+      #cdm-vbs-root .vbs-hero {
+        background: #000 !important;
+        min-height: 88vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 80px 56px !important;
+        position: relative !important;
       }
       .vbs-hero-eyebrow {
         font-size: 11px;
@@ -222,13 +222,14 @@
         align-items: stretch;
         width: 100%;
       }
-      .vbs-detail-item {
-        display: flex;
-        flex-direction: column;
-        padding: 36px 48px;
+      #cdm-vbs-root .vbs-detail-item {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 36px 48px !important;
         border-right: 1px solid #E0E0E0;
         min-width: 200px;
         flex: 1;
+        box-sizing: border-box !important;
       }
       .vbs-detail-item:last-child { border-right: none; }
       .vbs-detail-label {
@@ -248,10 +249,11 @@
       }
 
       /* ── SECTIONS ── */
-      .vbs-section {
-        padding: 96px 56px;
-        max-width: 1200px;
-        margin: 0 auto;
+      #cdm-vbs-root .vbs-section {
+        padding: 96px 56px !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
       }
       .vbs-section-eyebrow {
         font-size: 11px;
@@ -283,9 +285,10 @@
         border: 2px solid #E0E0E0;
         margin-top: 48px;
       }
-      .vbs-step {
-        background: #fff;
-        padding: 40px 36px;
+      #cdm-vbs-root .vbs-step {
+        background: #fff !important;
+        padding: 40px 36px !important;
+        box-sizing: border-box !important;
       }
       .vbs-step-num {
         font-family: 'Barlow Condensed', sans-serif;
@@ -311,7 +314,7 @@
       }
 
       /* ── CTA SECTION (black, like hero) ── */
-      .vbs-cta {
+      #cdm-vbs-root .vbs-cta {
         background: #000;
         padding: 96px 56px;
         text-align: center;
@@ -378,11 +381,11 @@
         .vbs-nav { padding: 0 24px; }
         .vbs-nav-links { display: none; }
         .vbs-hamburger { display: flex; }
-        .vbs-hero { padding: 60px 24px; min-height: 80vh; }
+        #cdm-vbs-root .vbs-hero { padding: 60px 24px; min-height: 80vh; }
         .vbs-details { flex-direction: column; }
-        .vbs-detail-item { border-right: none; border-bottom: 1px solid #E0E0E0; padding: 20px 24px; }
+        #cdm-vbs-root .vbs-detail-item { border-right: none; border-bottom: 1px solid #E0E0E0; padding: 20px 24px; }
         .vbs-section { padding: 64px 24px; }
-        .vbs-cta { padding: 72px 24px; }
+        #cdm-vbs-root .vbs-cta { padding: 72px 24px; }
         .vbs-footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
         .vbs-footer-info { text-align: left; }
       }
@@ -452,7 +455,7 @@
           <span class="vbs-section-eyebrow">Getting Started</span>
           <h2>HOW TO<br><span class="navy">REGISTER</span></h2>
         </div>
-        <div style="padding:0 56px 96px;">
+        <div style="padding:0 56px 96px !important;box-sizing:border-box;">
           <div class="vbs-steps">
             <div class="vbs-step">
               <div class="vbs-step-num">01</div>

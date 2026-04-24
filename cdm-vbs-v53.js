@@ -95,8 +95,9 @@
       .vbs-nav-links {
         display: flex;
         align-items: center;
-        gap: 36px;
+        gap: 28px;
         list-style: none;
+        flex-shrink: 0;
       }
       .vbs-nav-links a {
         text-decoration: none;
@@ -119,6 +120,10 @@
         text-transform: uppercase;
         text-decoration: none;
         transition: opacity 0.2s;
+        white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
+        flex-shrink: 0;
       }
       .vbs-nav-give:hover { opacity: 0.85; }
 
@@ -133,7 +138,6 @@
         text-align: center;
         padding: 80px 56px;
         position: relative;
-        overflow: hidden;
       }
       .vbs-hero-eyebrow {
         font-size: 11px;
@@ -163,9 +167,11 @@
       }
       .vbs-hero-btns {
         display: flex;
-        gap: 16px;
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 8px;
+        padding: 0 16px;
       }
       .btn-primary {
         background: #1E2A5E;
@@ -176,6 +182,11 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         padding: 16px 40px;
+        border-radius: 100px;
+        white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
         border-radius: 100px;
         text-decoration: none;
         transition: opacity 0.2s;
@@ -195,7 +206,9 @@
         border: 2px solid rgba(255,255,255,0.3);
         text-decoration: none;
         transition: border-color 0.2s;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
       }
       .btn-outline:hover { border-color: #fff; }
 
@@ -205,14 +218,17 @@
         border-top: 3px solid #1E2A5E;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
+        align-items: stretch;
+        width: 100%;
       }
       .vbs-detail-item {
         display: flex;
         flex-direction: column;
-        padding: 28px 40px;
+        padding: 36px 48px;
         border-right: 1px solid #E0E0E0;
-        min-width: 180px;
+        min-width: 200px;
+        flex: 1;
       }
       .vbs-detail-item:last-child { border-right: none; }
       .vbs-detail-label {
@@ -265,10 +281,11 @@
         gap: 2px;
         background: #E0E0E0;
         border: 2px solid #E0E0E0;
+        margin-top: 48px;
       }
       .vbs-step {
         background: #fff;
-        padding: 36px 28px;
+        padding: 40px 36px;
       }
       .vbs-step-num {
         font-family: 'Barlow Condensed', sans-serif;
@@ -431,9 +448,11 @@
 
       <!-- HOW TO REGISTER -->
       <div style="background:#fff;">
-        <div class="vbs-section">
+        <div class="vbs-section" style="padding-bottom:0;">
           <span class="vbs-section-eyebrow">Getting Started</span>
           <h2>HOW TO<br><span class="navy">REGISTER</span></h2>
+        </div>
+        <div style="padding:0 56px 96px;">
           <div class="vbs-steps">
             <div class="vbs-step">
               <div class="vbs-step-num">01</div>

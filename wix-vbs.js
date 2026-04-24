@@ -469,6 +469,18 @@
 
     document.body.appendChild(wrapper);
 
+    // Hide other page overlays (home, etc.) so VBS is visible
+    setTimeout(function() {
+      var homeRoot = document.getElementById('cdm-home-root');
+      if (homeRoot) homeRoot.style.display = 'none';
+      var sofRoot = document.getElementById('cdm-sof-root');
+      if (sofRoot) sofRoot.style.display = 'none';
+      var joinRoot = document.getElementById('cdm-join-root');
+      if (joinRoot) joinRoot.style.display = 'none';
+      var giveRoot = document.getElementById('cdm-give-root');
+      if (giveRoot) giveRoot.style.display = 'none';
+    }, 100);
+
     // Mobile drawer
     setTimeout(function () {
       var btn = wrapper.querySelector('.vbs-hamburger');

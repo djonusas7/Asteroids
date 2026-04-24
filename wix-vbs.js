@@ -10,11 +10,18 @@
   var hasParam = window.location.search.indexOf('vbs=1') !== -1;
   if (path !== '/vbs' && !hasParam) return;
 
-  // Immediately suppress any other page overlays
-  var suppressStyle = document.createElement('style');
-  suppressStyle.id = 'cdm-vbs-suppress';
-  suppressStyle.textContent = '#cdm-home-root,#cdm-sof-root,#cdm-join-root,#cdm-give-root{display:none!important}';
-  document.head.appendChild(suppressStyle);
+  // Immediately suppress any other page overlays using JS (inline styles override CSS)
+  function hideOtherOverlays() {
+    var ids = ['cdm-home-root','cdm-sof-root','cdm-join-root','cdm-give-root'];
+    ids.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.style.setProperty('display','none','important');
+    });
+  }
+  hideOtherOverlays();
+  // Watch for overlays added later
+  var suppressObserver = new MutationObserver(hideOtherOverlays);
+  suppressObserver.observe(document.body || document.documentElement, {childList:true, subtree:false});
 
 
   var FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScsR2SR3NVvyiIY31vvhKiog3sYEZ9WBAD9xIZfnMjgK3rr2A/viewform';
